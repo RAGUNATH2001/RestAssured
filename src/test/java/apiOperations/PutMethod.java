@@ -24,14 +24,14 @@ public class PutMethod {
 		
 		
 		String[] query = {"key" ,"qaclick123"};
-		String address  = 
+		
 		
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
-		String wholeResponce =	given().queryParam("key", "qaclick123")
+		String wholeResponce =	given().queryParam("key", "qaclick123").queryParam("place_id", placeid)
 			.headers("Content-Type","application/json")
 			.body(jsonFiles.putpayload.returnputpayload(placeid
 					, utility.random.generateRndomAddress(),query ))
-			.when().post("/maps/api/place/add/json").then().extract().response().asString();
+			.when().post("/maps/api/place/update/json").then().extract().response().asString();
 		
 		System.out.println(wholeResponce);
 		

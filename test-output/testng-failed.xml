@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apiOperations.PutMethod">
+      <class name="dynamicPayLoad.dataproviderMethod">
         <methods>
-          <include name="putOperation"/>
+          <include name="iterater" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- apiOperations.PutMethod -->
+      </class> <!-- dynamicPayLoad.dataproviderMethod -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
